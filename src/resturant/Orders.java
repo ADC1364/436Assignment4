@@ -13,6 +13,6 @@ public class Orders {
 	
 	public void removeOrder (OrderItem newItem) { orders.remove(newItem); }
 	
-	public Iterator getIterator () { return (Iterator) orders.iterator(); }
+	public java.util.Iterator<OrderItem> getIterator () { return orders.iterator(); }
 
 }

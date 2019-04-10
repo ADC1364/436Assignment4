@@ -3,9 +3,8 @@ package resturant;
 public class CMDGetMenu implements Command {
 	
 	 private Menu menu;
-
-
-	public CMDGetMenu( Aggregator aggr) {
+	
+	 public CMDGetMenu( Aggregator aggr) {
 		
 		this.menu = aggr.getMenu();
 	}

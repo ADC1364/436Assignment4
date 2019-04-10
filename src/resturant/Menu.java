@@ -1,7 +1,9 @@
 package resturant;
 
 import java.util.*;
+import java.util.Iterator;
 
+// need a clone method or copy method to pass a copy with the CMDGetMenu object.
 
 public class Menu {
 	
@@ -16,6 +18,6 @@ public class Menu {
 	
 	public void removeOrder (OrderItem newItem) { menu.remove(newItem); }
 	
-	public Iterator getIterator () { return (Iterator) menu.iterator(); }
+	public Iterator getIterator () { return  menu.iterator(); }
 
 }

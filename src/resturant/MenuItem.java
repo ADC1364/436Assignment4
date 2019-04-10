@@ -26,4 +26,6 @@ public class MenuItem {
 	public double getPrice () { return this.price; }
 				
 	public void setName (double newPrice) { price = newPrice; }
+	
+	public String toString () { return menuItemNum + " " +  name + " $" + price;}
 }

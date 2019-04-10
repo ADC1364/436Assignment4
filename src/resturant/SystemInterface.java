@@ -1,4 +1,5 @@
 package resturant;
+import java.util.Iterator;
 
 public class SystemInterface {
 	
@@ -6,7 +7,7 @@ public class SystemInterface {
 	
 	public static void init (Invoker newInv) { inv = newInv; }
 
-	public String [] getMenu() {
+	public static String [] getMenu() {
 		
 		Iterator itr = inv.getMenu().getIterator();
 		String [] menuItems = new String [inv.getMenu().menuSize()];
@@ -15,7 +16,8 @@ public class SystemInterface {
 		
 		while(itr.hasNext()) {
 			
-			menuItems[index] = itr.toString(); 
+			menuItems[index] = itr.next().toString();
+			index ++;
 		}
 		
 		return menuItems;
