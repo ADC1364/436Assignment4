@@ -12,6 +12,13 @@ public class MenuItem {
 		this.price = price;
 	}
 	
+	// copy constructor
+	public MenuItem(MenuItem otherItem) {
+		menuItemNum = otherItem.menuItemNum;
+		this.name = otherItem.name;
+		this.price = otherItem.price;
+	}
+	
 	// getter and setter methods for name field
 	public int getItemNum () { return this.menuItemNum; }
 			

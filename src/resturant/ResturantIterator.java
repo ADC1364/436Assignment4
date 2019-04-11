@@ -1,6 +1,6 @@
 package resturant;
 
-public interface Iterator {
+public interface ResturantIterator {
 	
 	public boolean hasNext();
 	
