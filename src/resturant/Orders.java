@@ -21,6 +21,7 @@ public class Orders {
 	
 	public void removeOrder (OrderItem newItem) { orders.remove(newItem); }
 	
+	public int orderSize() {return orders.size(); }
 	/*public ResturantIterator getIterator () { return new AllItemsIterator(); }
 	
 	private class AllItemsIterator implements ResturantIterator {
@@ -44,5 +45,7 @@ public class Orders {
 	}*/
 	
 	public Iterator getIterator() { return orders.iterator();}
+	
+	
 
 }

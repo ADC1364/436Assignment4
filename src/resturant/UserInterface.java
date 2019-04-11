@@ -1,5 +1,7 @@
 package resturant;
 
+import java.util.Scanner;
+
 public class UserInterface {
 
 	public static void main(String[] args) {
@@ -20,6 +22,39 @@ public class UserInterface {
 			
 			System.out.println(items[i]);
 		}
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please Enter the item number you wish to order: ");
+		int orderNum = input.nextInt();
+		
+		
+		boolean placed = SystemInterface.placeOrder(orderNum);
+		
+		if(placed)
+			System.out.println("Your order has been placed");
+		else
+			System.out.println("Error occured");
+		
+		System.out.println("Your tab is: ");
+		
+		/*String [] orders = SystemInterface.getOrders(orderNum);
+		
+		for(int i = 0; i < orders.length; i++) {
+			
+			System.out.println(orders[i]);
+		}
+		*/
+		
+		
+		
+		
+		String [] tab = SystemInterface.getTab();
+		
+		for(int i = 0; i < tab.length; i++) {
+			
+			System.out.println(tab[i]);
+		}
+		
 
 	}
 	

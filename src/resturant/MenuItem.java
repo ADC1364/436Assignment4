@@ -34,5 +34,5 @@ public class MenuItem {
 				
 	public void setName (double newPrice) { price = newPrice; }
 	
-	public String toString () { return menuItemNum + " " +  name + " $" + price;}
+	public String toString () { return menuItemNum + " " +  name + " $ " + price;}
 }
