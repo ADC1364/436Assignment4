@@ -24,26 +24,21 @@ public class UserInterface {
 		}
 		
 		Scanner input = new Scanner(System.in);
+		int orderNum = 0;
+		
+		do {
 		System.out.println("Please Enter the item number you wish to order: ");
-		int orderNum = input.nextInt();
+		orderNum = input.nextInt();
 		
 		
 		boolean placed = SystemInterface.placeOrder(orderNum);
 		
 		if(placed)
 			System.out.println("Your order has been placed");
-		else
-			System.out.println("Error occured");
+		
+		}while(orderNum >0 && orderNum < 4);
 		
 		System.out.println("Your tab is: ");
-		
-		/*String [] orders = SystemInterface.getOrders(orderNum);
-		
-		for(int i = 0; i < orders.length; i++) {
-			
-			System.out.println(orders[i]);
-		}
-		*/
 		
 		
 		

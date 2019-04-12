@@ -49,10 +49,12 @@ public class SystemInterface {
 	
 	public static String [] getTab() {
 		
-		Iterator <MenuItem> itr = inv.getTab().getIterator();
+		Tab currentTab = inv.getTab();
+		
+		Iterator <MenuItem> itr = currentTab.getIterator();
 		
 		
-		String [] tabItems = new String [inv.getTab().tabSize()];
+		String [] tabItems = new String [inv.getTab().tabSize() + 1];
 		
 		int index = 0;
 		
@@ -63,6 +65,8 @@ public class SystemInterface {
 			tabItems[index] = item.toString();
 			index ++;
 		}
+		
+		tabItems[tabItems.length-1] = "Your total is: $ " + currentTab.getSum();
 		
 		return tabItems;
 	}
