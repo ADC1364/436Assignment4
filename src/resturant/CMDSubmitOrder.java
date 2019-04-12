@@ -8,7 +8,7 @@ public class CMDSubmitOrder implements Command {
 
 	public CMDSubmitOrder( Aggregator aggr, int menuItemOrdered) { 
 		
-		Iterator menuItr = aggr.getMenu().getIterator();
+		Iterator <MenuItem> menuItr = aggr.getMenu().getIterator();
 		
 		submittedOrder =  aggr.getOrder();
 		

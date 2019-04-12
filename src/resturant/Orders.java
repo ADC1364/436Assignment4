@@ -22,29 +22,8 @@ public class Orders {
 	public void removeOrder (OrderItem newItem) { orders.remove(newItem); }
 	
 	public int orderSize() {return orders.size(); }
-	/*public ResturantIterator getIterator () { return new AllItemsIterator(); }
 	
-	private class AllItemsIterator implements ResturantIterator {
-		
-		private int index = 0;
-		
-		public AllItemsIterator() { }
-		
-		public boolean hasNext() {
-			return orders.size() - 1 == index;
-		}
-		
-		public OrderItem next() {
-			
-			if(!hasNext())
-				return null;
-			OrderItem item = orders.get(index);
-			index ++;
-			return item;
-		}
-	}*/
-	
-	public Iterator getIterator() { return orders.iterator();}
+	public Iterator<OrderItem> getIterator() { return orders.iterator();}
 	
 	
 

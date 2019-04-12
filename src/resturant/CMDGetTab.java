@@ -1,7 +1,5 @@
 package resturant;
 
-import java.util.Iterator;
-
 public class CMDGetTab implements Command {
 	
 	private Tab tab;

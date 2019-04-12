@@ -10,7 +10,7 @@ public class SystemInterface {
 
 	public static String [] getMenu() {
 		
-		Iterator itr = inv.getMenu().getIterator();
+		Iterator<MenuItem> itr = inv.getMenu().getIterator();
 		
 		
 		String [] menuItems = new String [inv.getMenu().menuSize()];
@@ -33,7 +33,7 @@ public class SystemInterface {
 		
 		Orders newOrders = inv.placeOrder(itemOrdered);
 		
-		Iterator itr = newOrders.getIterator();
+		Iterator<OrderItem> itr = newOrders.getIterator();
 		
 		while(itr.hasNext()) {
 			
@@ -47,33 +47,9 @@ public class SystemInterface {
 		
 	}
 	
-	public static String [] getOrders(int itemNum) {
-		
-		Orders order = inv.placeOrder(itemNum);
-		
-		Iterator itr = order.getIterator();
-		
-		
-		String [] menuItems = new String [order.orderSize()];
-		
-		int index = 0;
-		
-		while(itr.hasNext()) {
-			
-			OrderItem item = (OrderItem) itr.next();
-			
-			menuItems[index] = item.getItemNum() + "";
-			index ++;
-		}
-		
-		return menuItems;
-	}
-	
-	
-	
 	public static String [] getTab() {
 		
-		Iterator itr = inv.getTab().getIterator();
+		Iterator <MenuItem> itr = inv.getTab().getIterator();
 		
 		
 		String [] tabItems = new String [inv.getTab().tabSize()];

@@ -28,6 +28,6 @@ public class Tab {
 	
 	public int tabSize() { return tabItems.size();}
 	
-	public Iterator getIterator() { return tabItems.iterator();}
+	public Iterator <MenuItem> getIterator() { return tabItems.iterator();}
 
 }
