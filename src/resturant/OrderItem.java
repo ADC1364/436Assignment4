@@ -15,6 +15,4 @@ public class OrderItem {
 	}
 
 	public int getItemNum () { return this.orderItemNum; }
-	
-	public void setItemNum (int newOrderItemNum) { orderItemNum = newOrderItemNum; }
 }

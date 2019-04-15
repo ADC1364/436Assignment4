@@ -16,10 +16,9 @@ public class Tab {
 		Menu menu = new Menu(aggr.getMenu());
 		Orders orders = new Orders( aggr.getOrder());
 		
-		for(Iterator menuItr = menu.getIterator(); menuItr.hasNext();) {
+		for(Iterator <MenuItem> menuItr = menu.getIterator(); menuItr.hasNext();) {
 			MenuItem currentMenuItem = new MenuItem((MenuItem) menuItr.next());
-			int count = 0;
-			for(Iterator orderItr = orders.getIterator(); orderItr.hasNext();) {
+			for(Iterator <OrderItem> orderItr = orders.getIterator(); orderItr.hasNext();) {
 				OrderItem currentOrderItem = new OrderItem( (OrderItem) orderItr.next() );
 				
 				if(currentMenuItem.getItemNum() == currentOrderItem.getItemNum()) {

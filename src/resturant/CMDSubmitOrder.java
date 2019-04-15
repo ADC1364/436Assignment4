@@ -23,6 +23,6 @@ public class CMDSubmitOrder implements Command {
 	}
 
 	@Override
-	public Object execute() { return submittedOrder; }
+	public Object execute() { return new Orders (submittedOrder); }
 
 }

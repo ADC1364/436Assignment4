@@ -14,7 +14,7 @@ public class UserInterface {
 		
 		SystemInterface.init(inv);
 		
-		System.out.println("The Menu at the Resturnat is:");
+		System.out.println("The Menu at the Diner is:");
 		
 		String [] items = SystemInterface.getMenu();
 		

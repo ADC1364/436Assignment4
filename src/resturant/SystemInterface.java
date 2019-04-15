@@ -10,10 +10,12 @@ public class SystemInterface {
 
 	public static String [] getMenu() {
 		
-		Iterator<MenuItem> itr = inv.getMenu().getIterator();
+		Menu menu = inv.getMenu();
+		
+		Iterator<MenuItem> itr = menu.getIterator();
 		
 		
-		String [] menuItems = new String [inv.getMenu().menuSize()];
+		String [] menuItems = new String [menu.menuSize()];
 		
 		int index = 0;
 		
@@ -54,7 +56,7 @@ public class SystemInterface {
 		Iterator <MenuItem> itr = currentTab.getIterator();
 		
 		
-		String [] tabItems = new String [inv.getTab().tabSize() + 1];
+		String [] tabItems = new String [currentTab.tabSize() + 1];
 		
 		int index = 0;
 		

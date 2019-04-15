@@ -9,7 +9,10 @@ public class MenuItem {
 	public MenuItem(int itemNum, String name, double price) {
 		menuItemNum = itemNum;
 		this.name = name;
-		this.price = price;
+		if(price >= 0)
+			this.price = price;
+		else
+			this.price = 0;
 	}
 	
 	// copy constructor
@@ -19,20 +22,11 @@ public class MenuItem {
 		this.price = otherItem.price;
 	}
 	
-	// getter and setter methods for name field
 	public int getItemNum () { return this.menuItemNum; }
 			
-	public void setName (int newItemNum) { menuItemNum = newItemNum; }
-	
-	// getter and setter methods for name field
 	public String getName () { return this.name; }
 		
-	public void setName (String newName) { name = newName; }
-		
-	// getter and setter methods for price field
 	public double getPrice () { return this.price; }
-				
-	public void setName (double newPrice) { price = newPrice; }
 	
 	public String toString () { return menuItemNum + " " +  name + " $ " + price;}
 }

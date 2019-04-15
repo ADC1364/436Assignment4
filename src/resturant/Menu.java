@@ -25,7 +25,7 @@ public class Menu {
 	
 	public void addItem (MenuItem newItem) { menu.add(newItem);}
 	
-	public void removeOrder (MenuItem newItem) { menu.remove(newItem); }
+	public void removeItem (MenuItem newItem) { menu.remove(newItem); }
 	
 	public Iterator <MenuItem> getIterator() { return menu.iterator();}
 
